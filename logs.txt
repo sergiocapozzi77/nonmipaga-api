@@ -1,0 +1,29 @@
+App 4055471 output: Server is running on port 3000.
+App 4055471 output: error:  { Error: ER_ACCESS_DENIED_ERROR: Access denied for user 'sergio'@'localhost' (using password: YES)
+App 4055471 output:     at Handshake.Sequence._packetToError (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+App 4055471 output:     at Handshake.ErrorPacket (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/protocol/sequences/Handshake.js:123:18)
+App 4055471 output:     at Protocol._parsePacket (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+App 4055471 output:     at Parser._parsePacket (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/protocol/Parser.js:433:10)
+App 4055471 output:     at Parser.write (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/protocol/Parser.js:43:10)
+App 4055471 output:     at Protocol.write (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+App 4055471 output:     at Socket.<anonymous> (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/Connection.js:88:28)
+App 4055471 output:     at Socket.<anonymous> (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/Connection.js:526:10)
+App 4055471 output:     at Socket.emit (events.js:198:13)
+App 4055471 output:     at addChunk (_stream_readable.js:288:12)
+App 4055471 output:     --------------------
+App 4055471 output:     at Protocol._enqueue (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+App 4055471 output:     at Protocol.handshake (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/protocol/Protocol.js:51:23)
+App 4055471 output:     at PoolConnection.connect (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/Connection.js:116:18)
+App 4055471 output:     at Pool.getConnection (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/Pool.js:48:16)
+App 4055471 output:     at Pool.query (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/mysql/lib/Pool.js:202:8)
+App 4055471 output:     at Function.Furbetto.getAll.result [as getAll] (/home/nonmikwv/nonmipaga-api/app/models/customer.model.js:17:7)
+App 4055471 output:     at exports.findAll (/home/nonmikwv/nonmipaga-api/app/controllers/customer.controller.js:32:12)
+App 4055471 output:     at Layer.handle [as handle_request] (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/express/lib/router/layer.js:95:5)
+App 4055471 output:     at next (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/express/lib/router/route.js:137:13)
+App 4055471 output:     at Route.dispatch (/home/nonmikwv/nodevenv/nonmipaga-api/10/lib/node_modules/express/lib/router/route.js:112:3)
+App 4055471 output:   code: 'ER_ACCESS_DENIED_ERROR',
+App 4055471 output:   errno: 1045,
+App 4055471 output:   sqlMessage:
+App 4055471 output:    'Access denied for user \'sergio\'@\'localhost\' (using password: YES)',
+App 4055471 output:   sqlState: '28000',
+App 4055471 output:   fatal: true }
