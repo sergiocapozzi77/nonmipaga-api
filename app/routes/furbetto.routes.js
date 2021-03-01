@@ -1,11 +1,24 @@
 module.exports = app => {
   const furbetti = require("../controllers/furbetto.controller.js");
-  //const Furbetto = require("../models/customer.model.js");
+  const config = require("../config/config.js");
 
+  //const Furbetto = require("../models/customer.model.js");
+  const jwt = require("jsonwebtoken");
   // Create a new Customer
   //app.post("/customers", customers.create);
   app.get("/api/token/sign", (req, res) => {
-    res.json({ token: "dsfgiwedi3234udsufhsd43dff.3423dsffsdfsfis" });
+    var userData = {
+      name: "Sergio",
+      id: "4321",
+    };
+
+    let token = jwt.sign(userData, config.SECRET, {
+      expiresIn: "50m",
+      algorithm: "HS256",
+    });
+    return res.json({ token: token });
+
+    //res.json({ token: "dsfgiwedi3234udsufhsd43dff.3423dsffsdfsfis" });
   });
 
   
